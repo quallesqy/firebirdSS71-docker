@@ -13,8 +13,8 @@ RUN apt update && \
     mkdir -p /home/firebird && \
     cd /home/firebird
 
-#COPY firebirdss_2.1.7.18553-1_amd64.deb /home/firebird/firebird.deb
-COPY firebirdss_2.1.4.18393-1_amd64.deb /home/firebird/firebird.deb
+COPY firebirdss_2.1.7.18553-1_amd64.deb /home/firebird/firebird.deb
+#COPY firebirdss_2.1.4.18393-1_amd64.deb /home/firebird/firebird.deb
 
 RUN cd /home/firebird && \
     dpkg -i *.deb && \
