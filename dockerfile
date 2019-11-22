@@ -26,8 +26,8 @@ RUN cd /home/firebird && \
 COPY firebird.conf /opt/firebird/firebird.conf
 COPY security2.fdb /opt/firebird/security2.fdb
 
-RUN sudo mkdir /mnt/ramdisk
-RUN sudo mount -t tmpfs -o rw,size=4G tmpfs /mnt/ramdisk
+RUN mkdir /mnt/ramdisk
+RUN mount -t tmpfs -o rw,size=4G tmpfs /mnt/ramdisk
 
 EXPOSE 3050/tcp
 EXPOSE 3051/tcp
